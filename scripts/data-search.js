@@ -46,7 +46,8 @@ async function uploadingData() {
                 localStorage.setItem('countryRegion', countryData[0].region);
                 localStorage.setItem('countryCapital', countryData[0].capital);
                 localStorage.setItem('countryTopLevelDomain', countryData[0].tld[0]);
-                localStorage.setItem('countryCurrencies', countryData[0].currencies[0].name);
+                /* localStorage.setItem('countryCurrencies', countryData[0].currencies[0].name); */
+                /* localStorage.setItem('countryLanguages', countryData[0].languages[0]); */
             };
         };
     };
