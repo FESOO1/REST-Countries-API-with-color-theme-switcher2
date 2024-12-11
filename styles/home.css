@@ -1,0 +1,47 @@
+/* MAIN CONTENT */
+
+main {
+    padding-block: 120px;
+    padding-inline: 80px;
+}
+
+/* HOME INPUT */
+
+.home-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-input-inner {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    width: 400px;
+    height: 50px;
+    background-color: white;
+    column-gap: 15px;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding-inline: 15px 10px;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.home-input-svg {
+    width: 18px;
+    height: 18px;
+    fill: hsl(0, 0%, 52%);
+}
+
+.home-input-itself {
+    border: 0;
+    background-color: transparent;
+    font-size: 1rem;
+    color: hsl(0, 0%, 52%);
+    outline: none;
+}
+
+/* HOME INPUT */
+/* .home-output {
+
+} */
