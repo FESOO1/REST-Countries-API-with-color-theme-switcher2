@@ -44,12 +44,12 @@ main {
     outline: none;
 }
 
-/* HOME INPUT */
+/* HOME OUTPUT */
 
 .home-output {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px 50px;
+    gap: 50px 30px;
 }
 
 /* HOME OUTPUT ITSELF */
@@ -116,4 +116,37 @@ main {
 
 .home-output-itself:hover .home-output-itself-image-itself {
     scale: 1.05;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1200px) {
+    main {
+        padding-inline: 60px;
+    }
+}
+
+@media (max-width: 1000px) {
+    main {
+        padding-inline: 30px;
+    }
+}
+
+@media (max-width: 800px) {
+    main {
+        padding-block: 100px;
+    }
+    .home-input {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .home-input-inner {
+       width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    main {
+        padding-inline: 20px;
+    }
 }

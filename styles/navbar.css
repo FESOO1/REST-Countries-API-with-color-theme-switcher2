@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    column-gap: 20px;
     padding-inline: 50px;
     padding-block: 20px;
     z-index: 999;
@@ -81,4 +82,21 @@
 
 .body-js .navbar-mode-button-itself-text {
     color: white;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 800px) {
+    .navbar-text {
+        font-size: 1.2rem;
+    }
+    .navbar {
+        padding-inline: 30px;
+    }
+}
+
+@media (max-width: 375px) {
+    .navbar-text {
+        font-size: 1rem;
+    } 
 }

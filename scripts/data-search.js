@@ -37,7 +37,7 @@ async function uploadingData() {
                 const response = await fetch('https://restcountries.com/v3.1/name/' + outputItselfName[i].textContent);
                 const countryData = await response.json();
 
-                console.log(countryData[0]);
+                /* console.log(countryData[0]); */
                 localStorage.setItem('countryFlag', countryData[0].flags.png);
                 localStorage.setItem('countryFlagAlt', countryData[0].flags.alt);
                 localStorage.setItem('countryCommonName', countryData[0].name.common);
