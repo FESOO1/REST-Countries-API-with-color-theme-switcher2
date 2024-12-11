@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --f-inter: "Inter", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--f-inter);
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+}
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 50px;
+    padding-block: 20px;
+}
+
+/* NAVBAR TEXT */
+
+.navbar-text {
+    font-weight: 600;
+}
+
+/* NAVBAR MODE BUTTON */
+
+.navbar-mode-button-itself {
+    display: flex;
+    align-items: center;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    column-gap: 5px;
+}
+
+.navbar-mode-button-itself-svg {
+    width: 18px;
+    height: 18px;
+    fill: hsl(209, 23%, 22%);
+}
+
+.navbar-mode-button-itself-svg-second {
+    display: none;
+    width: 18px;
+    height: 18px;
+    fill: white;
+}
+
+.navbar-mode-button-itself-text {
+    font-weight: 500;
+    color: hsl(209, 23%, 22%);
+}
+
+/* MODE BUTTON JS */
+
+.mode-button-js .navbar-mode-button-itself-svg {
+    display: none;
+}
+
+.mode-button-js .navbar-mode-button-itself-svg-second {
+    display: unset;
+}
+
+/* DARK MODE COLORS */
+
+.body-js {
+    background-color: hsl(207, 26%, 17%);
+}
