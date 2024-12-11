@@ -9,8 +9,6 @@ async function uploadingData() {
         const response = await fetch('https://restcountries.com/v3.1/name/' + randomCountries[i]);
         const countryData = await response.json();
 
-        console.log(countryData[0])
-
         outputContainer.innerHTML += `
             <a href="../pages/country-info.html" class="home-output-itself">
                 <div class="home-output-itself-image">
@@ -29,6 +27,36 @@ async function uploadingData() {
     };
 };
 
-uploadingData();
+// SEARCH FOR A COUNTRY
+
+async function  searchForCountry() {
+    const searchInputItself = searchInput.value.toLowerCase();
+    
+    const response = await fetch('https://restcountries.com/v3.1/name/' + searchInputItself);
+    const countryData = await response.json();
+
+    if (searchInputItself.length > 0) {
+        outputContainer.innerHTML = `
+            <a href="../pages/country-info.html" class="home-output-itself">
+                <div class="home-output-itself-image">
+                    <img src="${countryData[0].flags.png}" alt="${countryData[0].flags.alt}" class="home-output-itself-image-itself">
+                </div>
+                <div class="home-output-itself-information">
+                    <h3 class="home-output-itself-information-name">${countryData[0].name.common}</h3>
+                    <div class="home-output-itself-information-inner">
+                        <h4 class="home-output-itself-information-inner-text"><span class="home-output-itself-information-inner-text-bold">Population:</span> ${countryData[0].population}</h4>
+                        <h4 class="home-output-itself-information-inner-text"><span class="home-output-itself-information-inner-text-bold">Region:</span> ${countryData[0].region}</h4>
+                        <h4 class="home-output-itself-information-inner-text"><span class="home-output-itself-information-inner-text-bold">Capital:</span> ${countryData[0].capital}</h4>
+                    </div>
+                </div>
+            </a>
+        `;
+    } else {
+        window.removeEventListener('DOMContentLoaded', uploadingData);
+        uploadingData();
+    };
+};
 
 // INITIALIZING BUTTONS
+window.addEventListener('DOMContentLoaded', uploadingData);
+searchInput.addEventListener('input', searchForCountry);
